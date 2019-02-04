@@ -1,3 +1,6 @@
+body {
+  background-color: whitesmoke!important;
+}
 #video{
     display: block;
     margin: 0 auto;
@@ -9,4 +12,32 @@
 #video-player{
   width: 400px!important;
   height: 350px!important;
+}
+/* MOSAIC */
+.mosaic-1{
+  background: url('/CloudShip.jpg');
+}
+.mosaic-2{
+  background: url('/gears.jpg');
+}
+.mosaic-3{
+  background: url('/Lava.jpg');
+}
+.mosaic-4{
+  background: url('/ship.jpg');
+}
+.mosaic-5{
+  background: url('/Treegrowth.jpg');
+}
+.mosaic-image {
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: width 1s;
+
+}
+.mosaic-image:hover{
+  width: 600px;
 }

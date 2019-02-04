@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Navbar, Nav} from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+import DemoReel from './DemoReel';
 
 export default class TopBar extends Component {
     constructor(props) {
@@ -15,10 +17,21 @@ export default class TopBar extends Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                        <Nav.Link href="#link">Home</Nav.Link>
-                        <Nav.Link href="#link">About</Nav.Link>
-                        <Nav.Link href="#link">Other Work</Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
+                        <LinkContainer to='/'>
+                            <Nav.Link>Home</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to='/demo-reel'>
+                            <Nav.Link>Demo Reel</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to='/'>
+                            <Nav.Link>Other Works</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to='/'>
+                            <Nav.Link>About</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/">
+                            <Nav.Link>Contact</Nav.Link>
+                        </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

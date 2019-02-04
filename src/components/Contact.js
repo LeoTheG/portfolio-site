@@ -11,6 +11,7 @@ export default class Contact extends Component {
     render() {
         return (
             <div id="contact">
+                <hr></hr>
                 <h1 style={styles.header}>Contact Me</h1>
                 <div style={styles.info}>
                     <h2>(818) 370-0033</h2>
@@ -23,11 +24,15 @@ export default class Contact extends Component {
 const styles = {
     header: {
         display: "flex",
-        justifyContent: "left"
+        justifyContent: "left",
+        marginLeft: "5%",
+        marginRight: "5%"
     },
     info: {
         display: "flex",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        marginLeft: "5%",
+        marginRight: "5%"
     },
     email: {
         display: "flex",

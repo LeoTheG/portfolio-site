@@ -5,20 +5,26 @@ import TopBar from './components/TopBar';
 import style from 'bootstrap/dist/css/bootstrap.css';
 import DemoReel from './components/DemoReel';
 import About from './components/About';
-import Works from './components/Works';
 import Contact from './components/Contact';
+import Mosaic from './components/Mosaic';
+
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import Home from './components/Home';
+import BreakDownPage from './components/BreakDownPage';
+
 
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <TopBar />
-        <DemoReel />
-        <About />
-        <Works />
-        <Contact />
-      </div>
+      <Router>
+        <div>
+          <TopBar />
+          <Route exact path="/demo-reel" component={BreakDownPage}/>
+          <Route exact path="/" component={Home} />
+          <Contact />
+        </div>
+      </Router>
     );
   }
 }
