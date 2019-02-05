@@ -7,15 +7,15 @@ export default class DemoReelPage extends Component {
         this.state = {
             videos: {
                 "lava": {
-                    breakdown: "/lavabreakdown.mov",
-                    main: "/lava.mov",
+                    breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/lava/lavabreakdown.mov",
+                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/lava/lava.mov",
                     current: "breakdown",
                     title: "Falling Lava",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ligula sem. Morbi eu velit fermentum, tincidunt ligula sed, posuere ante. Sed sollicitudin a massa quis vehicula. Cras vitae arcu ligula. Curabitur velit augue, placerat vitae lectus ut, sollicitudin pellentesque eros. Cras quis faucibus est. Phasellus ultricies dolor venenatis sodales rhoncus. Mauris eu risus varius, commodo felis vitae, sollicitudin dui. Aliquam ut volutpat tortor. Etiam vitae ipsum sit amet odio auctor eleifend in a dui. Suspendisse condimentum laoreet massa, nec ullamcorper lorem fermentum a. Nam eu bibendum ipsum. Vivamus pharetra volutpat felis, vitae lacinia lorem molestie at."
                 },
                 "treegrowth": {
-                    breakdown: "/beauty_2breakdown.mov",
-                    main: "/beauty_2.mov",
+                    breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/treegrowth/breakdown.mov",
+                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/treegrowth/beauty_2.mov",
                     current: "breakdown",
                     title: "Tree Growth",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac ligula sem. Morbi eu velit fermentum, tincidunt ligula sed, posuere ante. Sed sollicitudin a massa quis vehicula. Cras vitae arcu ligula. Curabitur velit augue, placerat vitae lectus ut, sollicitudin pellentesque eros. Cras quis faucibus est. Phasellus ultricies dolor venenatis sodales rhoncus. Mauris eu risus varius, commodo felis vitae, sollicitudin dui. Aliquam ut volutpat tortor. Etiam vitae ipsum sit amet odio auctor eleifend in a dui. Suspendisse condimentum laoreet massa, nec ullamcorper lorem fermentum a. Nam eu bibendum ipsum. Vivamus pharetra volutpat felis, vitae lacinia lorem molestie at."

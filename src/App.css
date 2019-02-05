@@ -23,19 +23,19 @@ body {
 }
 /* MOSAIC */
 .mosaic-1{
-  background: url('/CloudShip.jpg');
+  background: url('https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/Screenshots/CloudShip.jpg');
 }
 .mosaic-2{
-  background: url('/gears.jpg');
+  background: url('https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/Screenshots/gears.jpg');
 }
 .mosaic-3{
-  background: url('/Lava.jpg');
+  background: url('https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/Screenshots/Lava.jpg');
 }
 .mosaic-4{
-  background: url('/ship.jpg');
+  background: url('https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/Screenshots/ship.jpg');
 }
 .mosaic-5{
-  background: url('/Treegrowth.jpg');
+  background: url('https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/Screenshots/Treegrowth.jpg');
 }
 .mosaic-image {
   width: 300px;

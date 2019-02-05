@@ -14,10 +14,10 @@ export default class AboutPage extends Component {
                 {/*
                 <embed src="/resume.pdf" width="700px" height="650px" />
                 */}
-                <object data="/resume.pdf" width="700px" height="650px">
-                    <p><a href="/resume.pdf">View Resume</a></p>
+                <object data="https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/Gregory+Kalamdaryan+-+Resume.pdf" width="700px" height="650px">
+                    <p><a href="https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/Greg+-+Resume+(2).pdf">View Resume</a></p>
                 </object>
-                <img src="/GregsFACE.png" style={styles.image} />
+                <img src="https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/GregsFACE.png" style={styles.image} />
             </Div>
         );
     }
