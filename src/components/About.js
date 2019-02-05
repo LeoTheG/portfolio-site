@@ -11,9 +11,12 @@ export default class About extends Component{
     render() {
         return (
             <AboutDiv>
+                <Spacer>
+
                 <Paragraph>
                     My name is Gregory Kalamdaryan and I've been working with VFX for 7 year. I started out with Maya's nParticles and Bifrost engine. During my time at Los Angeles Film School, I moved on to Realflow and eventually HoudiniFX. I have now been using Houdini for 5 years alongside Nuke to build 3D scenes to composite in.
                 </Paragraph>
+                </Spacer>
             </AboutDiv>
         );
     }
@@ -24,12 +27,13 @@ const AboutDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 5%;
+    padding: 5% 0 5% 0;
 `
 
 const Paragraph = styled.p`
-    margin-left: 30%;
-    margin-right: 30%;
     text-align: center;
     font-size: 20px;
+`
+const Spacer = styled.div`
+    max-width: 500px;
 `

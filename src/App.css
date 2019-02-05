@@ -1,5 +1,7 @@
 body {
   background-color: whitesmoke!important;
+  padding-bottom: 7%;
+  overflow-x: hidden!important;
 }
 #video{
     display: block;
@@ -9,9 +11,15 @@ body {
     position: relative!important;
 
 }
-#video-player{
+.breakdown-video{
+  width: 700px;
+  height: 450px;
+  max-width: 100%;
+}
+.video-player{
   width: 400px!important;
   height: 350px!important;
+  display: none!important;
 }
 /* MOSAIC */
 .mosaic-1{

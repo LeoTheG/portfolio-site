@@ -12,15 +12,22 @@ export default class DemoReel extends Component {
     }
     render() {
         return (
-            <div>
+            <div style={styles.video} >
+                    
 
                 <Iframe url="https://player.vimeo.com/video/297450049"
-                    width="800px"
+                    max-width="100%!important"
                     height="450px"
                     allowFullScreen
                     id="video"
                 />
             </div>
         );
+    }
+}
+
+const styles = {
+    video: {
+        paddingTop: "2%"
     }
 }

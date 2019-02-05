@@ -10,14 +10,19 @@ export default class Contact extends Component {
     }
     render() {
         return (
+            <Div>
+
             <div id="contact">
-                <hr></hr>
-                <h1 style={styles.header}>Contact Me</h1>
+                <h2 style={styles.header}>Contact Me</h2>
+                <Text>
+
                 <div style={styles.info}>
-                    <h2>(818) 370-0033</h2>
-                    <h2 style={styles.email}>gregk2013@gmail.com</h2>
+                    <h3>(818) 370-0033</h3>
+                    <h3>gregk2013@gmail.com</h3>
                 </div>
+                </Text>
             </div>
+            </Div>
         );
     }
 }
@@ -25,25 +30,27 @@ const styles = {
     header: {
         display: "flex",
         justifyContent: "left",
-        marginLeft: "5%",
-        marginRight: "5%"
+        marginLeft: "1%",
+        marginRight: "1%",
+        marginBottom: "0px"
     },
     info: {
         display: "flex",
         justifyContent: "space-between",
-        marginLeft: "5%",
-        marginRight: "5%"
+        marginLeft: "1%",
+        marginRight: "1%",
     },
-    email: {
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "center"
-    }
 }
 const Div = styled.div`
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 5%;
+    padding-top: 5px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
+`
+
+const Text = styled.div`
+    h3 {
+        font-size: 20px;
+    }
 `

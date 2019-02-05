@@ -12,25 +12,22 @@ export default class TopBar extends Component {
     }
     render() {
         return (
-            <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">Greg Kalamdaryan</Navbar.Brand>
+            <Navbar bg="light" expand="lg" className="sticky-top">
+                <Navbar.Brand href="/">Greg Kalamdaryan</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                        <LinkContainer to='/'>
-                            <Nav.Link>Home</Nav.Link>
+                        <LinkContainer exact={true} to='/'>
+                            <Nav.Link >Home</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to='/demo-reel'>
                             <Nav.Link>Demo Reel</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to='/'>
+                        <LinkContainer to='/other-works'>
                             <Nav.Link>Other Works</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to='/'>
+                        <LinkContainer to='/about'>
                             <Nav.Link>About</Nav.Link>
-                        </LinkContainer>
-                        <LinkContainer to="/">
-                            <Nav.Link>Contact</Nav.Link>
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
