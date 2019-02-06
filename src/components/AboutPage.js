@@ -67,10 +67,14 @@ const Div = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 8% 10% 0 10%;
+    @media (max-width: 500px){
+        margin-top: 45%;
+    }
 `
 const PDF = styled.div`
     width: 100%;
     height: 100%;
+    opacity: 0.8;
 `
 const Image = styled.div`
     width: 400px;

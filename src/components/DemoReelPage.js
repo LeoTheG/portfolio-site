@@ -1,94 +1,69 @@
 import React, { Component } from 'react';
 import Breakdown from './Breakdown';
 import styled from 'styled-components';
-const queryString = require('query-string');
 
-
-export default class DemoReelPage extends Component {
-    constructor(props) {
+export default class DemoReelPage extends Component{
+    constructor(props){
         super(props)
         this.state = {
-            videos: {
-                "lava": {
-                    breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/lava/lavabreakdown.mov",
-                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/lava/lava.mov",
+            urls: {
+                "candle": {
+                    breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/candle/candle_breakdown.mov",
+                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/candle/candle.mov",
                     current: "main",
-                    title: "Falling Lava",
-                    description: "This shot was made based off the tutorial by Ben Watts.",
+                    title: "Candle",
+                    description: "I put a lot of work into the shaders of the smoke on this shot. The debris had a bit of a ripple effect but some compositing and the smoke fixed it naturally. This was modeled in Maya, and effects were done in Houdini. Composited in Nuke."
                 },
-                "treegrowth": {
-                    breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/treegrowth/breakdown.mov",
-                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/treegrowth/beauty_2.mov",
+                "ocean": {
+                    breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/ship/shipbreakdown.mov",
+                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/ship/ship2.mov",
                     current: "main",
-                    title: "Tree Growth",
-                    description: "This tree growth was made off a tool using L-systems. It can also support the look of actual trees and even vines. It used packed objects to allow me to potentially replicate very dense geometry with barely any extra strain on the computer. This was done in Houdini and composited in Nuke."
+                    title: "Ocean",
+                    description: "The scale of this shot extended render times but it was still done in reasonable time. I’m responsible for all aspects except modeling the ship. Everything was done in Houdini and composited in Nuke. "
                 },
-                "cloud": {
-                    breakdown: null,
-                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/clouds/cloudship.mov",
+                "sword": {
+                    breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/sword/sword_breakdown.mov",
+                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/sword/sword.mov",
                     current: "main",
-                    title: "Cloudship",
-                    description: "This shot was made based off the tutorial by Andreas Vrhovsek.",
+                    title: "Sword",
+                    description: "This was done by making changes to an existing tool I had. In order to allow me to use materials on the objects, I had to delete the faces as opposed making their opacity 0 like I did on the other scenes. This was done in Houdini and composited in Nuke."
                 },
-                "gears": {
-                    breakdown: null,
-                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/transmog/gears.mov",
+                "tornado": {
+                    breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/tornado/tornado.mov",
+                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/tornado/tornado_breakdown.mov",
                     current: "main",
-                    title: "Gears",
-                    description: "This shot was made based off the tutorial by Jeff Wolverton."
+                    title: "Tornado",
+                    description: "This tornado was made by projecting UV’s on an animated cylinder. While it looks very dense, the simulation times are very quick. Background was filmed by me. All effects were done in Houdini and composited in Nuke."
                 },
-                "ship": {
-                    breakdown: null,
-                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/transmog/ship.mov",
+                "underwater": {
+                    breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/underwater/underwater_breakdown.mov",
+                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/underwater/underwater.mov",
                     current: "main",
-                    title: "Ship",
-                    description: "This shot was made based off the tutorial by Jeff Wolverton."
+                    title: "Underwater",
+                    description: "This shot was made using a lot of noise with edge detection and mixing color channels in a 3d scene. Most of this shot was done using Nuke with some additional effects from Houdini."
                 },
             }
         }
     }
-    componentDidMount() {
-        const parsed = queryString.parse(window.location.search);
-        const height = document.body.scrollHeight
-        switch(parsed.video){
-            case "cloud":
-                setTimeout(()=>window.scrollTo(0, height/3), 1000)
-                break;
-            case "gears":
-                setTimeout(()=>window.scrollTo(0, height/2), 1000)
-                break;
-            case "lava":
-                setTimeout(()=>window.scrollTo(0, 0), 1000)
-                break;
-            case "ship":
-                setTimeout(()=>window.scrollTo(0, height), 1000)
-                break;
-            case "treegrowth":
-                setTimeout(()=>window.scrollTo(0, height/8), 1000)
-                break;
-        }
-        //window.scrollTo(0, this.state.videos.cloud.ref.offsetTop)
-    }
-    click(name) {
-        return () => {
-            const obj = JSON.parse(JSON.stringify(this.state.videos))
+    click(name){
+        return ()=>{
+            const obj = JSON.parse(JSON.stringify(this.state.urls))
             obj[name].current = obj[name].current == "breakdown" ? "main" : "breakdown"
-            this.setState({ videos: obj })
+            this.setState({urls: obj})
         }
     }
     render() {
         const x = []
-        for (const key in this.state.videos) {
+        for(const key in this.state.urls){
             x.push(
-                <Breakdown
+                <Breakdown 
                     key={key}
-                    current={this.state.videos[key].current}
-                    name={key}
-                    video={this.state.videos[key][this.state.videos[key].current]}
-                    click={this.click.bind(this)}
-                    title={this.state.videos[key].title}
-                    description={this.state.videos[key].description}
-                    ref={this.state.videos[key].ref}
+                    current={this.state.urls[key].current} 
+                    name={key} 
+                    video={this.state.urls[key][this.state.urls[key].current]} 
+                    click={this.click.bind(this)} 
+                    title={this.state.urls[key].title}
+                    description={this.state.urls[key].description}
                 />
             )
         }
@@ -101,5 +76,8 @@ export default class DemoReelPage extends Component {
 }
 
 const Div = styled.div`
-    margin-top: 5%;
+    margin-top: 8%;
+    @media (max-width: 500px){
+        margin-top: 45%;
+    }
 `

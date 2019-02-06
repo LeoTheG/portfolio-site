@@ -39,13 +39,13 @@ export default class Breakdown extends Component {
                 )
         }
         return (
-            <div>
+            <Container>
 
             <Div>
                 <Video>
-                    <video key={this.props.video} style={{width: "900px", height: "100%"}}  controls type="video/mov">
+                    <ActualVideo key={this.props.video} style={styles.video}  controls type="video/mov">
                         <source src={this.props.video} />
-                    </video>
+                    </ActualVideo>
                 </Video>
                 
                 <TitleDescriptionBlock>
@@ -56,7 +56,7 @@ export default class Breakdown extends Component {
                 </TitleDescriptionBlock>
             </Div>
             <Hr></Hr>
-            </div>
+            </Container>
         );
     }
 }
@@ -64,6 +64,12 @@ const TitleDescriptionBlock = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (max-width: 500px){
+        flex-basis: 300px;
+        width: 100%;
+        margin-left: 20px;
+        min-width: 150px;
+    }
 `
 const Hr = styled.hr`
     border: 1px solid #3681f0;
@@ -88,8 +94,17 @@ const styles = {
         textDecoration: "underline",
         marginTop: "10px",
         fontSize: "20px"
-    }
+    },
 }
+const ActualVideo = styled.video`
+    width: 900px;
+    height: 100%;
+    @media (max-width: 500px){
+        width: 150px;
+        height: 150px;
+    }
+`
+
 const Video = styled.div`
     display: flex;
     justify-content: center;
@@ -107,4 +122,10 @@ const Title = styled.h1`
 const Description = styled.p`
     text-align: center;
     margin: 0 15% 0 15%;
+    @media (max-width: 500px){
+        margin: 0 0 0 0;
+    }
+`
+const Container = styled.div`
+    max-width: 100vw;
 `

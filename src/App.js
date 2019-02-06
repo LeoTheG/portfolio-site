@@ -10,9 +10,9 @@ import Mosaic from './components/Mosaic';
 
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import Home from './components/Home';
-import BreakdownPage from './components/BreakdownPage';
 import DemoReelPage from './components/DemoReelPage';
 import AboutPage from './components/AboutPage';
+import OtherWorksPage from './components/OtherWorksPage';
 
 
 
@@ -22,8 +22,8 @@ class App extends Component {
       <Router>
         <div>
           <TopBar />
-          <Route exact path="/demo-reel" component={BreakdownPage}/>
-          <Route exact path="/other-works" component={DemoReelPage}/>
+          <Route exact path="/demo-reel" component={DemoReelPage}/>
+          <Route exact path="/other-works" component={OtherWorksPage}/>
           <Route exact path="/about" component={AboutPage}/>
           <Route exact path="/" component={Home} />
           <Contact />
