@@ -45,6 +45,9 @@ export default class DemoReelPage extends Component{
             }
         }
     }
+    componentDidMount(){
+        window.scrollTo(0,0)
+    }
     click(name){
         return ()=>{
             const obj = JSON.parse(JSON.stringify(this.state.urls))

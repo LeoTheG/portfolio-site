@@ -48,6 +48,7 @@ export default class OtherWorksPage extends Component {
         }
     }
     componentDidMount() {
+        window.scrollTo(0,0)
         const parsed = queryString.parse(window.location.search);
         const height = document.body.scrollHeight
         switch(parsed.video){
