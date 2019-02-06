@@ -67,13 +67,15 @@ export default class OtherWorksPage extends Component {
             case "treegrowth":
                 setTimeout(()=>window.scrollTo(0, height/7), 1000)
                 break;
+            default:
+                break;
         }
         //window.scrollTo(0, this.state.videos.cloud.ref.offsetTop)
     }
     click(name) {
         return () => {
             const obj = JSON.parse(JSON.stringify(this.state.videos))
-            obj[name].current = obj[name].current == "breakdown" ? "main" : "breakdown"
+            obj[name].current = obj[name].current === "breakdown" ? "main" : "breakdown"
             this.setState({ videos: obj })
         }
     }

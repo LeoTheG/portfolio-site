@@ -38,7 +38,7 @@ export default class AboutPage extends Component {
                 <P><a href="https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/Gregory_Resume.pdf">Download Resume</a></P>
                 </PDFCombined>
                 <Image>
-                    <img style={styles.image} src="https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/GregsFACE.png"/>
+                    <img alt="Gregory Kalamdaryan" style={styles.image} src="https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/GregsFACE.png"/>
                     <Text>Proficient with:</Text>
                     <LogoList images={this.state.logoImages} />
                 </Image>

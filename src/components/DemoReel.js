@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import Iframe from 'react-iframe';
-import Breakdown from './Breakdown';
 
 export default class DemoReel extends Component {
     constructor(props) {

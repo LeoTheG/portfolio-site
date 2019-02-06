@@ -2,15 +2,12 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 export default class LogoList extends Component{
-    constructor(props){
-        super(props)
-    }
     render() {
         const x = []
         for(const image in this.props.images){
             x.push(
                 <Image key={image}>
-                    <img style={styles.image} src={this.props.images[image]} />
+                    <img alt="product logo" style={styles.image} src={this.props.images[image]} />
                 </Image>
             )
         }

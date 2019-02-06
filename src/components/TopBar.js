@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import DemoReel from './DemoReel';
 import styled from 'styled-components';
 
 export default class TopBar extends Component {
@@ -16,7 +15,7 @@ export default class TopBar extends Component {
             <Div>
             <Navbar expand="lg" >
                 <Navbar.Brand href="/">
-                <img style={styles.logo} src="https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/Logo.png"/>
+                <img alt="logo" style={styles.logo} src="https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/Logo.png"/>
                 <span>Gregory Kalamdaryan </span><small>VFX Artist</small></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

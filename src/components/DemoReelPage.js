@@ -51,7 +51,7 @@ export default class DemoReelPage extends Component{
     click(name){
         return ()=>{
             const obj = JSON.parse(JSON.stringify(this.state.urls))
-            obj[name].current = obj[name].current == "breakdown" ? "main" : "breakdown"
+            obj[name].current = obj[name].current === "breakdown" ? "main" : "breakdown"
             this.setState({urls: obj})
         }
     }

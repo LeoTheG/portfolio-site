@@ -7,8 +7,12 @@ export default class Home extends Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            
         }
+        this.myRef = React.createRef()
+    }
+    componentDidMount(){
+        window.scrollTo(0,0)
     }
     render() {
         return (
