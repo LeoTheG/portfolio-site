@@ -13,11 +13,11 @@ export default class BreakdownPage extends Component{
                     title: "Candle",
                     description: "This candle explosion was more difficult than I had thought due to the candle having trouble containing the pyro simulation. After some fiddling with some VDB collision settings, the piece came together quickly. This was modeled in Maya, and effects were done in Houdini. Composited in Nuke."
                 },
-                "ship": {
+                "ocean": {
                     breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/ship/shipbreakdown.mov",
                     main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/ship/ship2.mov",
                     current: "breakdown",
-                    title: "Ship",
+                    title: "Ocean",
                     description: "The scale of this shot extended render times but it was still done in reasonable time. I’m responsible for all aspects except modeling the ship. Everything was done in Houdini and composited in Nuke. "
                 },
                 "sword": {
