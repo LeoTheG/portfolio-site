@@ -49,3 +49,7 @@ body {
 .mosaic-image:hover{
   width: 600px;
 }
+
+.navbar-brand small{
+  display: block;
+}

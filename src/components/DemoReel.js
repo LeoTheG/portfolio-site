@@ -17,7 +17,7 @@ export default class DemoReel extends Component {
 
                 <Iframe url="https://player.vimeo.com/video/315374764"
                     max-width="100%!important"
-                    height="450px"
+                    height="700px"
                     allowFullScreen
                     id="video"
                 />

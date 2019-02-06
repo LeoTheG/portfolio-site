@@ -16,26 +16,30 @@ export default class Breakdown extends Component {
     render() {
         const x = []
         const y = []
-        if(this.props.current == "main")
-            x.push(
+        // prevent arrows for single videos
+        if (!(this.props.title === 'Cloudship' || this.props.title === 'Gears' || this.props.title === 'Ship')) {
+
+            if (this.props.current == "main")
+                x.push(
                     <Arrow key={this.props.current + "-" + this.props.name}>
-                        <LeftArrow onClick={this.props.click(this.props.name)} size={"40px"} style={styles.arrow}/>
+                        <LeftArrow onClick={this.props.click(this.props.name)} size={"40px"} style={styles.arrow} />
                     </Arrow>
-            )
-        else 
-            y.push(
+                )
+            else
+                y.push(
                     <Arrow key={this.props.current + "-" + this.props.name}>
-                        <RightArrow onClick={this.props.click(this.props.name)} size={"40px"} style={styles.arrow}/>
+                        <RightArrow onClick={this.props.click(this.props.name)} size={"40px"} style={styles.arrow} />
                     </Arrow>
-            )
-        return( 
+                )
+        }
+        return (
             <div style={styles.container}>
                 <Video>
                     {x}
                     <video key={this.props.video} className="breakdown-video" controls type="video/mov">
-                        <source  src={this.props.video} />
+                        <source src={this.props.video} />
                     </video>
-                    {y} 
+                    {y}
                 </Video>
                 <Title>{this.props.title}</Title>
                 <Description>{this.props.description}</Description>
