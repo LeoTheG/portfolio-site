@@ -14,50 +14,86 @@ export default class Breakdown extends Component {
         }
     }
     render() {
-        const x = []
-        const y = []
+        let x = []
+        let y = []
         // prevent arrows for single videos
         if (!(this.props.title === 'Cloudship' || this.props.title === 'Gears' || this.props.title === 'Ship')) {
 
             if (this.props.current == "main")
-                x.push(
+                x = (
+                    <p style={styles.watch} onClick={this.props.click(this.props.name)}>Watch the breakdown</p>
+                    /*
                     <Arrow key={this.props.current + "-" + this.props.name}>
                         <LeftArrow onClick={this.props.click(this.props.name)} size={"40px"} style={styles.arrow} />
                     </Arrow>
+                    */
                 )
             else
-                y.push(
+                y = (
+                    <p style={styles.watch} onClick={this.props.click(this.props.name)}>Watch the final composition</p>
+                    /*
                     <Arrow key={this.props.current + "-" + this.props.name}>
                         <RightArrow onClick={this.props.click(this.props.name)} size={"40px"} style={styles.arrow} />
                     </Arrow>
+                    */
                 )
         }
         return (
-            <div style={styles.container}>
+            <div>
+
+            <Div>
                 <Video>
-                    {x}
-                    <video key={this.props.video} className="breakdown-video" controls type="video/mov">
+                    <video key={this.props.video} style={{width: "900px", height: "100%"}}  controls type="video/mov">
                         <source src={this.props.video} />
                     </video>
-                    {y}
                 </Video>
-                <Title>{this.props.title}</Title>
-                <Description>{this.props.description}</Description>
+                
+                <TitleDescriptionBlock>
+                    <Title>{this.props.title}</Title>
+                    <Description>{this.props.description}</Description>
+                    {x}
+                    {y}
+                </TitleDescriptionBlock>
+            </Div>
+            <Hr></Hr>
             </div>
         );
     }
 }
+const TitleDescriptionBlock = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`
+const Hr = styled.hr`
+    border: 1px solid #3681f0;
+    width: 75%;
+`
+const Div = styled.div`
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 10% 0 10%;
+`
 const styles = {
     container: {
         maxWidth: "100%"
     },
     arrow: {
         cursor: "pointer"
+    },
+    watch: {
+        cursor: "pointer", 
+        textAlign: "center", 
+        textDecoration: "underline",
+        marginTop: "10px",
+        fontSize: "20px"
     }
 }
 const Video = styled.div`
     display: flex;
     justify-content: center;
+    margin-bottom: 2%;
 `
 const Arrow = styled.div`
     display: flex;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Breakdown from './Breakdown';
+import styled from 'styled-components';
 const queryString = require('query-string');
 
 
@@ -11,14 +12,14 @@ export default class DemoReelPage extends Component {
                 "lava": {
                     breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/lava/lavabreakdown.mov",
                     main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/lava/lava.mov",
-                    current: "breakdown",
+                    current: "main",
                     title: "Falling Lava",
                     description: "This shot was made based off the tutorial by Ben Watts.",
                 },
                 "treegrowth": {
                     breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/treegrowth/breakdown.mov",
                     main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/treegrowth/beauty_2.mov",
-                    current: "breakdown",
+                    current: "main",
                     title: "Tree Growth",
                     description: "This tree growth was made off a tool using L-systems. It can also support the look of actual trees and even vines. It used packed objects to allow me to potentially replicate very dense geometry with barely any extra strain on the computer. This was done in Houdini and composited in Nuke."
                 },
@@ -92,9 +93,13 @@ export default class DemoReelPage extends Component {
             )
         }
         return (
-            <div>
+            <Div>
                 {x}
-            </div>
+            </Div>
         );
     }
 }
+
+const Div = styled.div`
+    margin-top: 5%;
+`

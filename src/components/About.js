@@ -14,7 +14,7 @@ export default class About extends Component{
                 <Spacer>
 
                 <Paragraph>
-                    My name is Gregory Kalamdaryan and I've been working with VFX for 7 years. I started out with Maya's nParticles and Bifrost engine. During my time at Los Angeles Film School, I moved on to Realflow and eventually HoudiniFX. I have now been using Houdini for 5 years alongside Nuke to build 3D scenes to composite in.
+                    I am Gregory Kalamdaryan and I've been working with VFX for 7 years. I started out with Maya's nParticles and Bifrost engine. During my time at Los Angeles Film School, I moved on to Realflow and eventually HoudiniFX. I have now been using Houdini for 5 years alongside Nuke to build 3D scenes to composite in.
                 </Paragraph>
                 </Spacer>
             </AboutDiv>
@@ -35,5 +35,5 @@ const Paragraph = styled.p`
     font-size: 20px;
 `
 const Spacer = styled.div`
-    max-width: 500px;
+    max-width: 800px;
 `

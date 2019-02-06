@@ -66,4 +66,5 @@ const Images = styled.div`
 
 const Title = styled.h1`
     text-align: center;
+    font-family: default;
 `

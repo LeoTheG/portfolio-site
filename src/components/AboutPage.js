@@ -66,7 +66,7 @@ const Text = styled.h1`
 const Div = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 2% 10% 0 10%;
+    margin: 8% 10% 0 10%;
 `
 const PDF = styled.div`
     width: 100%;

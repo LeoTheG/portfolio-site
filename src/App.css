@@ -1,7 +1,16 @@
 body {
-  background-color: whitesmoke!important;
-  padding-bottom: 7%;
+  background-color: black!important;
   overflow-x: hidden!important;
+}
+.navbar, .navbar-default, nav, .navbar-header{
+  background-color: black!important;
+}
+h1, h2, h3, p, .nav-link, .navbar-brand{
+  color: #3681f0!important;
+  font-family: 'Roboto Slab', serif;
+}
+.nav-link{
+  margin: 0px 10px 0 10px;
 }
 #video{
     display: block;
@@ -12,8 +21,8 @@ body {
 
 }
 .breakdown-video{
-  width: 700px;
-  height: 450px;
+  width: 2000px;
+  height: 550px;
   max-width: 100%;
 }
 .video-player{
@@ -49,7 +58,21 @@ body {
 .mosaic-image:hover{
   width: 600px;
 }
-
+.navbar-brand span{
+  margin-left: 20px;
+}
+.navbar-brand {
+  margin-top:-0px;
+}
+.navbar-brand > img {
+  margin-bottom: -10px;
+}
 .navbar-brand small{
   display: block;
+  margin-left: 110px;
+  margin-top: -20px;
+}
+.navbar-toggler {
+  background-color: white;
+  margin-top: 10px;
 }

@@ -44,9 +44,9 @@ const styles = {
 const Div = styled.div`
     padding-top: 5px;
     width: 100%;
-    background-color: white;
-    position: fixed;
+    background-color: black;
     bottom: 0px;
+    margin-top: 5%;
 `
 
 const Text = styled.div`
