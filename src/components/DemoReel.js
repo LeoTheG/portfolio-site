@@ -13,7 +13,11 @@ export default class DemoReel extends Component {
             <div style={styles.video} >
                     
 
-                <Iframe url="https://player.vimeo.com/video/315374764?autoplay=1&loop=1"
+
+
+
+                <Iframe
+				url="https://player.vimeo.com/video/606198131?h=cc3db5339c?autoplay=1&loop=1"
                     // max-width="100%!important"
 					width="100%"
                     height={window.innerHeight * .8 + "px"}
