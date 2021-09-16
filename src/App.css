@@ -1,3 +1,6 @@
+#root {
+	--textPrimary: #3681f0;
+}
 html {
   height: 100%;
 }

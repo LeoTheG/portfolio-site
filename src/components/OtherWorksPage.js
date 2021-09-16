@@ -16,6 +16,13 @@ export default class OtherWorksPage extends Component {
                     title: "Falling Lava",
                     description: "This shot was made based off the tutorial by Ben Watts.",
                 },
+                "sword": {
+                    breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/sword/sword_breakdown.mov",
+                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/sword/sword.mov",
+                    current: "main",
+                    title: "Sword",
+                    description: "This was done by making changes to an existing tool I had. In order to allow me to use materials on the objects, I had to delete the faces as opposed making their opacity 0 like I did on the other scenes. This was done in Houdini and composited in Nuke."
+                },
                 "treegrowth": {
                     breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/treegrowth/breakdown.mov",
                     main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/treegrowth/beauty_2.mov",
@@ -43,6 +50,13 @@ export default class OtherWorksPage extends Component {
                     current: "main",
                     title: "Ship",
                     description: "This shot was made based off the tutorial by Jeff Wolverton."
+                },
+                "candle": {
+                    breakdown: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/candle/candle_breakdown.mov",
+                    main: "https://s3-us-west-1.amazonaws.com/gregkalamdaryanbucket2/website_files/videos/candle/candle.mov",
+                    current: "main",
+                    title: "Candle",
+                    description: "I put a lot of work into the shaders of the smoke on this shot. The debris had a bit of a ripple effect but some compositing and the smoke fixed it naturally. This was modeled in Maya, and effects were done in Houdini. Composited in Nuke."
                 },
             }
         }
@@ -72,33 +86,44 @@ export default class OtherWorksPage extends Component {
         }
         //window.scrollTo(0, this.state.videos.cloud.ref.offsetTop)
     }
-    click(name) {
-        return () => {
+    click = (name) => {
             const obj = JSON.parse(JSON.stringify(this.state.videos))
             obj[name].current = obj[name].current === "breakdown" ? "main" : "breakdown"
             this.setState({ videos: obj })
-        }
     }
     render() {
-        const x = []
-        for (const key in this.state.videos) {
-            x.push(
-                <Breakdown
-                    key={key}
-                    current={this.state.videos[key].current}
-                    name={key}
-                    video={this.state.videos[key][this.state.videos[key].current]}
-                    click={this.click.bind(this)}
-                    title={this.state.videos[key].title}
-                    description={this.state.videos[key].description}
-                    ref={this.state.videos[key].ref}
-                />
-            )
-        }
+        // const x = []
+        // for (const key in this.state.videos) {
+        //     x.push(
+        //         <Breakdown
+        //             key={key}
+        //             current={this.state.videos[key].current}
+        //             name={key}
+        //             video={this.state.videos[key][this.state.videos[key].current]}
+        //             click={this.click.bind(this)}
+        //             title={this.state.videos[key].title}
+        //             description={this.state.videos[key].description}
+        //             ref={this.state.videos[key].ref}
+        //         />
+        //     )
+        // }
         return (
-            <Div>
-                {x}
-            </Div>
+			
+			<Div>
+
+               {Object.entries(this.state.videos).map(([key, val]) => 
+                <Breakdown 
+                    key={val.title}
+					isBreakdown={val.current === 'breakdown'}
+					videoSrcBreakdown={val.breakdown}
+					videoSrcMain={val.main}
+					isIFrame={val.isIFrame}
+					title={val.title}
+					description={val.description}
+					onClickView={() => this.click(key)}
+                />
+				)}
+			</Div>
         );
     }
 }
