@@ -25,4 +25,4 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: client/build
+          build_dir: build
