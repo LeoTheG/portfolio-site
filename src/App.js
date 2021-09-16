@@ -4,7 +4,7 @@ import TopBar from './components/TopBar';
 import style from 'bootstrap/dist/css/bootstrap.css'; // eslint-disable-line no-unused-vars
 import Contact from './components/Contact';
 
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { Route, HashRouter as Router, HashRouter } from 'react-router-dom'
 import Home from './components/Home';
 import DemoReelPage from './components/DemoReelPage';
 import AboutPage from './components/AboutPage';
@@ -15,7 +15,7 @@ import OtherWorksPage from './components/OtherWorksPage';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <HashRouter>
         <div>
           <TopBar />
           <Route exact path="/demo-reel" component={DemoReelPage}/>
@@ -24,7 +24,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Contact />
         </div>
-      </Router>
+      </HashRouter>
     );
   }
 }
