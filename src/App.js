@@ -4,7 +4,7 @@ import TopBar from './components/TopBar';
 import style from 'bootstrap/dist/css/bootstrap.css'; // eslint-disable-line no-unused-vars
 import Contact from './components/Contact';
 
-import { Route, HashRouter as Router, HashRouter } from 'react-router-dom'
+import { Route,  HashRouter } from 'react-router-dom'
 import Home from './components/Home';
 import DemoReelPage from './components/DemoReelPage';
 import AboutPage from './components/AboutPage';
