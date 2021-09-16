@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default class TopBar extends Component {
@@ -19,8 +19,8 @@ export default class TopBar extends Component {
                 <span>Gregory Kalamdaryan </span><small>VFX Artist</small></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                        <LinkContainer exact={true} to='/'>
+                    <Nav className="ml-auto" style={{display: 'flex', width: 400, justifyContent: 'space-between'}}>
+                        {/* <LinkContainer exact={true} to='/'>
                             <Nav.Link >Home</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to='/demo-reel'>
@@ -31,7 +31,19 @@ export default class TopBar extends Component {
                         </LinkContainer>
                         <LinkContainer to='/about'>
                             <Nav.Link>About</Nav.Link>
-                        </LinkContainer>
+                        </LinkContainer> */}
+                        <Link to='/'>
+						Home
+                        </Link>
+                        <Link to='/demo-reel'>
+						Demo Reel
+                        </Link>
+                        <Link to='/other-works'>
+						Other Works
+                        </Link>
+                        <Link to='/about'>
+						About
+                        </Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
